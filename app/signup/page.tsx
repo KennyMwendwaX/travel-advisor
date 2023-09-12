@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import Img from "@/public/image.jpg";
 import { useState } from "react";
 import { HiAtSymbol, HiFingerPrint, HiUser } from "react-icons/hi";
 import { useForm } from "react-hook-form";
@@ -52,7 +50,7 @@ export default function Signup() {
     };
 
     const register = await fetch(
-      `${process.env.BASE_URL}/api/auth/register`,
+      "http://localhost:3000/api/auth/register",
       options
     );
 
@@ -73,14 +71,11 @@ export default function Signup() {
 
   return (
     <>
-      <div className="mx-auto flex flex-col bg-gray-800 items-center justify-center px-6 py-8 md:h-screen lg:py-0">
-        <a
-          href="#"
-          className="p-4 flex items-center text-2xl font-semibold text-gray-400">
-          {/* <Image className="mr-2 h-8 w-8" src={Img} alt="logo" /> */}
+      <div className="mx-auto flex flex-col bg-slate-800 min-h-screen items-center justify-center px-6 py-8 md:h-screen lg:py-0">
+        <div className="p-4 flex items-center text-2xl font-semibold text-gray-400">
           Iconic
-        </a>
-        <div className="w-full rounded-lg bg-gray-700 shadow sm:max-w-md md:mt-0 xl:p-0">
+        </div>
+        <div className="w-full rounded-lg bg-slate-700 shadow sm:max-w-md md:mt-0 xl:p-0">
           <div className="space-y-3 p-6 sm:p-8 md:space-y-5">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-300 md:text-2xl">
               Sign up to have an account
@@ -89,7 +84,7 @@ export default function Signup() {
               <div
                 className="mb-4 rounded-lg border border-red-600 bg-red-50 p-4 text-sm text-red-800"
                 role="alert">
-                {serverErrors[0]}
+                {serverErrors}
               </div>
             )}
             <form
