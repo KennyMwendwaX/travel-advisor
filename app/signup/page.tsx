@@ -29,7 +29,7 @@ export default function Signup() {
   });
 
   // const { data: session } = useSession();
-  // const router = useRouter();
+  const router = useRouter();
 
   // if (session) {
   //   router.replace("/");
@@ -63,9 +63,7 @@ export default function Signup() {
     }
 
     if (register.ok) {
-      // router.push("/signin");
-
-      console.log(":)");
+      router.push("/signin");
     }
   }
 
