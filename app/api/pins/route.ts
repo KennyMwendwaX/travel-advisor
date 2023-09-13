@@ -16,4 +16,8 @@ export async function GET() {
   }
 }
 
-export async function POST(request: Response) {}
+// Add a pin
+export async function POST(request: Request) {
+  const req = await request.json();
+  const {} = req;
+}
