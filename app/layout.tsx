@@ -19,11 +19,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession();
+  // const session = await getServerSession();
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <SessionProvider session={session}>{children}</SessionProvider>
+        {/* <SessionProvider session={session}> */}
+        {children}
+        {/* </SessionProvider> */}
       </body>
     </html>
   );
