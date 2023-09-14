@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "SiteReviewer",
+  title: "TravelAdvisor",
   description: "Review cites and destinations on maps",
 };
 
